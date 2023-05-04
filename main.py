@@ -63,7 +63,7 @@ def maxdrawdown(return_list):
         if return_list[i]>b:
             b=return_list[i]
         maxac[i]=b
-    print(maxac)
+    #print(maxac)
     i=np.argmax((maxac-return_list)/maxac) #结束位置
     if i == 0:
         return 0
@@ -169,7 +169,7 @@ plt.plot(xs,net_value_1)
 plt.ylabel("Net Value")
 plt.title("Net value of the strategy")
     
-
+print("The maximum drawdown is:", round(maxdrawdown(net_value_1)*100,2),"%")
 
 
 
